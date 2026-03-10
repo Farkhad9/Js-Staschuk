@@ -85,3 +85,45 @@
 // }
 // console.log(umnojenie(5,2));===> 5*2=10
 // console.log(umnojenie(5));====> 5*1=5
+
+
+// const newfn = (c,d=3)=>
+// {
+//     return c - d
+// }
+// console.log(newfn(10,5)); // 10-5=5
+// console.log(newfn(10)); // 10-3=7
+
+
+// const newPost = (post, addedAt= Date()) => ({
+//     ...post,
+//     addedAt
+// })
+// const fdPost = {
+//     id: 1,
+//     name: 'My first post',
+// }
+// console.log(newPost(fdPost));
+
+
+// const erfunction = ()=>{
+//     throw new Error('This is an error')
+// }
+// try{ erfunction()}
+// catch(error){
+//     console.log(error.message)
+// }
+// console.log('continue')
+
+const newArray = [1,2,3,4,5]
+newArray.forEach(el => console.log(el*2))
+console.log(newArray);
+
+
+const secondArray = newArray.map(el => el*2)
+console.log(secondArray);
+
+// map metodu yeni bir array qaytarir foreach ise
+//  sadece * icra eliyir ve array qaytarir yeni ki foreachin
+//  qabagina 3 cu array = foreach yazmaq olmaz error verir
+//  mapda ise olar vee map ve foreach ikside esas olan arrayi deyismir
