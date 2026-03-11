@@ -127,3 +127,38 @@ console.log(secondArray);
 //  sadece * icra eliyir ve array qaytarir yeni ki foreachin
 //  qabagina 3 cu array = foreach yazmaq olmaz error verir
 //  mapda ise olar vee map ve foreach ikside esas olan arrayi deyismir
+
+// const userProfile = {
+//     name : 'John',
+//     commentsQuantity : 30,
+//     city : 'New York'
+// }
+
+// const {name, commentsQuantity} = userProfile
+// const {city} = userProfile
+// console.log(commentsQuantity); // 30
+// console.log(city); // New York
+
+
+
+
+// const fruits = ['apple', 'banana', 'grape']
+// const [firstFruit, secondFruit, thirdFruit] = fruits
+// console.log(firstFruit); // apple
+// console.log(secondFruit); // banana
+// console.log(thirdFruit); // grape
+
+
+const userProfile = {
+    name : 'John',
+    commentsQuantity : 30,
+}
+const userInfo = ({name, commentsQuantity})=> {
+    if (!commentsQuantity){
+        return `User ${name} has no comments`
+    } 
+    else {
+        return `User ${name} has ${commentsQuantity} comments`
+    }
+}
+userInfo(userProfile) // User John has 30 comments
