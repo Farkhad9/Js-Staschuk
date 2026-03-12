@@ -115,13 +115,13 @@
 // }
 // console.log('continue')
 
-const newArray = [1,2,3,4,5]
-newArray.forEach(el => console.log(el*2))
-console.log(newArray);
+// const newArray = [1,2,3,4,5]
+// newArray.forEach(el => console.log(el*2))
+// console.log(newArray);
 
 
-const secondArray = newArray.map(el => el*2)
-console.log(secondArray);
+// const secondArray = newArray.map(el => el*2)
+// console.log(secondArray);
 
 // map metodu yeni bir array qaytarir foreach ise
 //  sadece * icra eliyir ve array qaytarir yeni ki foreachin
@@ -149,16 +149,69 @@ console.log(secondArray);
 // console.log(thirdFruit); // grape
 
 
-const userProfile = {
-    name : 'John',
-    commentsQuantity : 30,
-}
-const userInfo = ({name, commentsQuantity})=> {
-    if (!commentsQuantity){
-        return `User ${name} has no comments`
-    } 
-    else {
-        return `User ${name} has ${commentsQuantity} comments`
+// const userProfile = {
+//     name : 'John',
+//     commentsQuantity : 30,
+// }
+// const userInfo = ({name, commentsQuantity})=> {
+//     if (!commentsQuantity){
+//         return `User ${name} has no comments`
+//     } 
+//     else {
+//         return `User ${name} has ${commentsQuantity} comments`
+//     }
+// }
+// userInfo(userProfile) // User John has 30 comments
+
+
+// const value = 5
+// value
+// ?
+//     console.log('True')
+// :
+//     console.log('False')
+
+
+// const value1  = 142
+// value2 = 12
+
+// value1 && value2
+// ? myFunction(value1, value2)
+// : secFunc()
+
+
+
+// let value = 5
+// console.log(value >= 14 ? value : value-=2 );
+
+// value = 15
+// const result = value >= 14 ? value : value-=2
+// console.log(result);
+
+
+
+// const object1 = {
+//     point : 86,
+//     age : 30,
+//     id : 993
+// }
+// for (const key in object1){
+// console.log(key,object1[key]);
+// }
+
+
+class Comment {
+    constructor(text){
+        this.text = text
+        this.votesQty = 0
+    }
+    upvote(){
+        this.votesQty += 1
     }
 }
-userInfo(userProfile) // User John has 30 comments
+const firstComment = new Comment('First comment')
+firstComment.upvote()
+console.log(firstComment.votesQty); // 1
+firstComment.upvote()
+console.log(firstComment.votesQty); // 2
+
