@@ -218,4 +218,33 @@
 
 
 
+// promise
+const getData = (url) =>
+    new Promise((resolve, reject) =>
+        fetch(url)
+            .then(response => response.json())
+            .then(json => resolve(json))
+            .catch(error => reject(error))
+    )
+getData('https://jsonplaceholder.typicode.com/todos')
+    .then(data => console.log(data))
+    .catch(error => console.log(error.message))
+const postData = async (url, body) => {
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body)
+        })
+        const json = await response.json()
+        console.log('Cavab:', json)
+    } catch (error) {
+        console.log('Xəta:', error.message)
+    }
+}
 
+postData('https://jsonplaceholder.typicode.com/posts', {
+    title: 'Mənim postum',
+    body: 'Bu test mətndir',
+    userId: 1
+})
